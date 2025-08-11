@@ -4,15 +4,16 @@ import ProgressBar from './components/ProgressBar'
 
 function App() {
  
-  const [value , setValue] = useState(25);
+  const [value , setValue] = useState(0);
 
   useEffect(() => {
     
     setInterval(() => {
-      setValue(value+1);
-    },1000);
+      setValue((val) => val+1);
+    },100);
+
     
-  },[value])
+  },[])
 
   return (
     <div className='app'>

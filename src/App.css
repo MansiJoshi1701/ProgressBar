@@ -16,8 +16,8 @@ body {
   position: relative;
   height: 20px;
   width: 500px;
-  background-color: rgb(32, 218, 79);
-  border: 1px solid #c5c5c5;
+  background-color: rgb(233, 236, 239);
+  border: 1px solid black;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -26,5 +26,16 @@ body {
   background-color: #00c251;
   color: #fff;
   height: 100%;
+  width: 20%;
   text-align: center;
+}
+
+.progress span {
+  color: black;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
 }
