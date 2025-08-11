@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ProgressBar = ({value}) => {
+const ProgressBar = ({value , setComplete}) => {
 
     //this logic is to keep the value between 0 & 100
     const [num , setNum] = useState(0);
@@ -8,6 +8,9 @@ const ProgressBar = ({value}) => {
     useEffect(() => {
 
         setNum(Math.min(100 , Math.max(0 , value)));
+
+        if(num === 100) setComplete(true);
+
     } , [value]);
 
 
