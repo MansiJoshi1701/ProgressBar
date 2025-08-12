@@ -10,11 +10,14 @@ function App() {
 
   useEffect(() => {
     
-    setInterval(() => {
+    const interval = setInterval(() => {
       setValue((val) => val+1);
     },100);
 
-    
+    //Since React components can unmount, it's essential to clear the interval when 
+    //the component unmounts to prevent memory leaks or unnecessary function calls.
+    return () => clearInterval(interval);
+
   },[])
 
   return (
